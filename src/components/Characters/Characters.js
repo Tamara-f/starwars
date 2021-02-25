@@ -134,7 +134,6 @@ export default class Characters extends Component {
       const num = homeworld.substr(-3).split('/').join('') - 1;
       const planet = this.state.planets[num];
       if (planet == undefined) {
-        console.log('true');
         return homeworld;
       }
       return planet.name;
