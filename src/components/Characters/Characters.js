@@ -116,8 +116,8 @@ export default class Characters extends Component {
       const currentCharacter = this.state.characters.find(
         character => character.name === currentName
       );
-      const homeworld = this.getHome(`${currentCharacter.homeworld}`);
-      currentCharacter.homeworld = homeworld;
+      currentCharacter.homeworld =
+        e.currentTarget.parentNode.childNodes[1].childNodes[2].childNodes[1].textContent;
 
       LocalServ.setFavorite(currentCharacter);
     } else {
@@ -129,13 +129,20 @@ export default class Characters extends Component {
     likeBtn.classList.toggle('notLike');
   };
 
-  getHome(homeworld) {
-    if (this.state.planets) {
+  getHome = homeworld => {
+    try {
       const num = homeworld.substr(-3).split('/').join('') - 1;
       const planet = this.state.planets[num];
+      if (planet == undefined) {
+        console.log('true');
+        return homeworld;
+      }
       return planet.name;
+    } catch (e) {
+      console.log(e);
+      return homeworld;
     }
-  }
+  };
 
   onBtnUp() {
     window.scrollTo(0, 0);
@@ -183,7 +190,8 @@ export default class Characters extends Component {
                     </p>
                     <p>
                       <span>homeworld: </span>
-                      {this.getHome(`${character.homeworld}`)}
+                      {this.getHome(`${character.homeworld}`) ||
+                        `${character.homeworld}`}
                     </p>
                   </Link>
                 </li>

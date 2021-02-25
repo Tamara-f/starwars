@@ -15,7 +15,6 @@ export default class CharDetails extends Component {
     films: [],
     homeworld: '',
     isLoading: true,
-    // active: false,
   };
 
   async componentDidMount() {
@@ -55,7 +54,9 @@ export default class CharDetails extends Component {
   toggleClass = async e => {
     const likeBtn = e.currentTarget;
     if (likeBtn.className === 'notLike') {
-      LocalServ.setFavorite(this.state);
+      const newChar = this.state.character;
+      newChar.homeworld = this.state.homeworld;
+      LocalServ.setFavorite(newChar);
     } else {
       swal('Character removed from favorites!');
       const newFavorites = LocalServ.removeFavorite(this.state.character.name);
