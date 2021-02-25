@@ -4,8 +4,8 @@
     "CharDetails.js": "/starwars/static/js/CharDetails.b3779309.chunk.js",
     "CharDetails.js.map": "/starwars/static/js/CharDetails.b3779309.chunk.js.map",
     "main.css": "/starwars/static/css/main.a1746458.chunk.css",
-    "main.js": "/starwars/static/js/main.c72593a6.chunk.js",
-    "main.js.map": "/starwars/static/js/main.c72593a6.chunk.js.map",
+    "main.js": "/starwars/static/js/main.cc4b8759.chunk.js",
+    "main.js.map": "/starwars/static/js/main.cc4b8759.chunk.js.map",
     "runtime-main.js": "/starwars/static/js/runtime-main.a3beff63.js",
     "runtime-main.js.map": "/starwars/static/js/runtime-main.a3beff63.js.map",
     "static/js/3.0709127b.chunk.js": "/starwars/static/js/3.0709127b.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.a3beff63.js",
     "static/js/3.0709127b.chunk.js",
     "static/css/main.a1746458.chunk.css",
-    "static/js/main.c72593a6.chunk.js"
+    "static/js/main.cc4b8759.chunk.js"
   ]
 }
