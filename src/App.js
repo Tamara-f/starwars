@@ -20,11 +20,10 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route path={routes.home} exact component={Home} />
-
             <Route path={routes.charDetails} exact component={AsyncChar} />
             <Route path={routes.login} exact component={Login} />
             <PrivateRoute path={routes.user} exact component={User} />
-            <Redirect to={'/login'} />
+            <Redirect to={'/'} />
           </Switch>
         </Suspense>
       </Navigation>
