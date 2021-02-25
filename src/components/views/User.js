@@ -37,7 +37,7 @@ export default class User extends Component {
     return (
       <>
         <h2>Your favorite characters</h2>
-        {characters.length !== 0 ? (
+        {characters ? (
           <div>
             <ul className={s.charactersList}>
               {characters.map(character => (
