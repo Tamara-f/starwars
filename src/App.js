@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+
 import Home from './components/views/Home';
 import User from './components/views/User';
 import Login from './components/views/Login';
