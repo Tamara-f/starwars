@@ -78,7 +78,7 @@ export default class Characters extends Component {
       swal('Please provide more info');
       return;
     }
-    this.setState({ searchQuery: query, page: 1, characters: [] });
+    this.setState({ searchQuery: query, characters: [] });
   };
 
   fetchNextCharacters = async () => {
@@ -146,8 +146,9 @@ export default class Characters extends Component {
   onBtnUp() {
     window.scrollTo(0, 0);
   }
-  onBtnAll = () => {
-    this.fetchApi();
+  onBtnAll = async () => {
+    await this.fetchApi();
+    this.setState({ showBtn: true, showAll: false });
   };
 
   setLike(name) {
